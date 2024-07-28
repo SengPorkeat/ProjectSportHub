@@ -14,10 +14,11 @@ export const fetchSportclubs = createAsyncThunk(
   "sportclubs/fetchSportclubs",
   async (_, { rejectWithValue }) => {
     let allResults = [];
-    let nextPage = apiUrl;
+    let nextPage = `${apiUrl}`;
 
     try {
       while (nextPage) {
+        nextPage = nextPage.replace(/^http:/, "https:");
         const response = await fetch(nextPage);
         if (!response.ok) {
           throw new Error("Network response was not ok");
