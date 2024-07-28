@@ -6,6 +6,7 @@ const initialState = {
   status: "idle", // idle -> loading | successful | failed
   error: null,
 };
+
 const baseUrl = import.meta.env.VITE_BASE_URL;
 const endPoint = import.meta.env.VITE_SPORT_URL;
 const apiUrl = `${baseUrl}${endPoint}`;
@@ -38,7 +39,6 @@ export const fetchClubById = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const response = await fetch(`${apiUrl}${id}`);
-      // console.log("id", id);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
