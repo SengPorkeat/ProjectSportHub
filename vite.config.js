@@ -8,7 +8,7 @@ export default defineConfig({
   },
   // root: ".",
   plugins: [react()],
-  // assetsInclude: ["**/*.JPG", "**/*.jpg"],
+  assetsInclude: ["**/*.JPG", "**/*.jpg"],
   // build: {
   //   outDir: "dist",
   //   emptyOutDir: true,
