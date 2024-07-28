@@ -3,7 +3,7 @@ import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import PointMarker from "../marker/PointMarker";
 
 const MapComponent = () => {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+  const baseUrl = import.meta.env.VITE_BASE_URL.replace(/^http:/, "https:");
   const endPoint = import.meta.env.VITE_ALLMAP_URL;
   const apiUrl = `${baseUrl}${endPoint}`;
   const [radius, setRadius] = useState(5);
