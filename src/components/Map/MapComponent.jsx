@@ -18,7 +18,7 @@ const MapComponent = () => {
         let nextUrl = apiUrl;
 
         while (nextUrl) {
-          nextPage = nextPage.replace(/^http:/, "https:");
+          nextUrl = nextPage.replace(/^http:/, "https:");
           const response = await fetch(nextUrl);
           const data = await response.json();
           allClubs = [...allClubs, ...data.results];
