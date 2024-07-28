@@ -6,7 +6,7 @@ const initialState = {
   status: "idle", // idle -> loading | successful | failed
   error: null,
 };
-const baseUrl = "https://sporthub.automatex.dev/api/";
+const baseUrl = import.meta.env.VITE_BASE_URL;
 const endPoint = import.meta.env.VITE_SPORT_URL;
 const apiUrl = `${baseUrl}${endPoint}`;
 
