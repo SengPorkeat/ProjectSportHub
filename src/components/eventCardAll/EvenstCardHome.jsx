@@ -64,18 +64,19 @@ export default function EvenstCardHome({
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
                     <FacebookShareButton
                       url={shareUrl}
-                      hashtag={`${title} - ${description}`}
+                      hashtag={`#${title} - ${description}`}
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
                     </FacebookShareButton>
-                    <TelegramShareButton
+
+                    {/* <TelegramShareButton
                       url={shareUrl}
                       title="Check out this event!"
                       className="flex items-center ml-2"
                     >
                       <FaTelegramPlane className="h-[13px]" />
-                    </TelegramShareButton>
+                    </TelegramShareButton> */}
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 mt-3">
                     {formattedDate}
