@@ -4,6 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FacebookShareButton } from "react-share";
 import moment from "moment";
 import { Helmet } from "react-helmet";
+import { FacebookProvider, EmbeddedPost } from "react-social-media-embed";
 
 export default function EvenstCardHome({
   slug,
@@ -76,6 +77,15 @@ export default function EvenstCardHome({
                 </div>
               </div>
             </div>
+          </div>
+          {/* Example of embedding a Facebook post */}
+          <div className="mt-5">
+            <FacebookProvider appId="your-app-id">
+              <EmbeddedPost
+                href="https://www.facebook.com/facebook/posts/10153231379946729"
+                width="500"
+              />
+            </FacebookProvider>
           </div>
         </div>
       </section>
