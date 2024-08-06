@@ -34,6 +34,10 @@ export default function EvenstCardHome({
                 <img
                   src={imageUrl}
                   alt={title}
+                  onError={(e) => {
+                    console.error("Image failed to load:", e);
+                    e.target.src = "https://via.placeholder.com/650x260"; // Fallback image
+                  }}
                   className="h-[260px] w-full group-hover:scale-110 transition-transform duration-300 object-cover"
                 />
               </div>
