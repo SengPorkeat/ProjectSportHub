@@ -21,6 +21,14 @@ export default function EvenstCardHome({
   console.log("Image URL:", imageUrl); // Debugging line
   console.log("Title:", title); // Debugging line
 
+  const shareData = {
+    url: shareUrl,
+    quote: `${title} - ${description}`,
+    hashtag: "#SportHub",
+    picture: imageUrl,
+    title: title,
+  };
+
   return (
     <Link to={`/eventDetail/${id}`}>
       <section
@@ -55,9 +63,7 @@ export default function EvenstCardHome({
                 <div className="flex flex-col mb-2">
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
                     <FacebookShareButton
-                      url={shareUrl}
-                      quote={`${title} - ${description}`}
-                      hashtag="#SportHub"
+                      {...shareData}
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
@@ -75,3 +81,4 @@ export default function EvenstCardHome({
     </Link>
   );
 }
+s
