@@ -61,14 +61,16 @@ export default function EvenstCardHome({
                 </div>
                 <div className="flex flex-col mb-2">
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
-                    <FacebookShareButton
+                    <OKShareButton
                       url={shareUrl}
-                      quote={'HelloWorld'}
+                      image={imageUrl}
+                      title={title}
+                      description={description}
                       hashtag="#SportHub"
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
-                    </FacebookShareButton>
+                    </OKShareButton>
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 mt-3">
                     {formattedDate}
