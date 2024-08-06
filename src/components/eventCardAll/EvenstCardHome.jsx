@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
-import { FacebookShareButton, OKShareButton } from "react-share";
+import { FacebookShareButton } from "react-share";
 import moment from "moment";
 import { Helmet } from "react-helmet";
 
@@ -61,16 +61,16 @@ export default function EvenstCardHome({
                 </div>
                 <div className="flex flex-col mb-2">
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
-                    <OKShareButton
+                    <FacebookShareButton
                       url={shareUrl}
-                      image={imageUrl}
                       title={title}
                       description={description}
+                      image={imageUrl}
                       hashtag="#SportHub"
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
-                    </OKShareButton>
+                    </FacebookShareButton>
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 mt-3">
                     {formattedDate}
