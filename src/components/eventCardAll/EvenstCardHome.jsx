@@ -14,15 +14,13 @@ export default function EvenstCardHome({
   description,
   id,
 }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const endPoint = import.meta.env.VITE_BASE_IMAGE_URL;
-  const shareUrl = `${baseUrl}/eventDetail/${id}`;
+  const shareUrl = `${window.location.origin}/eventDetail/${id}`;
   const formattedDate = moment(date).format("YYYY-MM-DD");
   const imageUrl = `${endPoint}${img}`;
 
   console.log("Image URL:", imageUrl);
   console.log("Title:", title);
-  console.log("Description:", description);
 
   return (
     <Link to={`/eventDetail/${id}`}>
@@ -65,7 +63,7 @@ export default function EvenstCardHome({
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
                     <FacebookShareButton
                       url={shareUrl}
-                      quote={`${title} - ${description}`}
+                      quote={'HelloWorld'}
                       hashtag="#SportHub"
                       className="flex items-center"
                     >
