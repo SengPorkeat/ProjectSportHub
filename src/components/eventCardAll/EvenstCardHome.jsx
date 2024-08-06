@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaTelegramPlane } from "react-icons/fa";
 import { FacebookShareButton, TelegramShareButton } from "react-share";
 import moment from "moment";
 import { Helmet } from "react-helmet";
@@ -71,11 +71,10 @@ export default function EvenstCardHome({
                     </FacebookShareButton>
                     <TelegramShareButton
                       url={shareUrl}
-                      title="Hello"
-                      hashtag="#SportHub"
-                      className="flex items-center"
+                      title="Check out this event!"
+                      className="flex items-center ml-2"
                     >
-                      <FaFacebookF className="h-[13px]" />
+                      <FaTelegramPlane className="h-[13px]" />
                     </TelegramShareButton>
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 mt-3">
