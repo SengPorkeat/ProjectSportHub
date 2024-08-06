@@ -33,6 +33,7 @@ export default function EvenstCardHome({
           <meta property="og:description" content={description} />
           <meta property="og:image" content={imageUrl} />
           <meta property="og:url" content={shareUrl} />
+          <meta property="og:type" content="website" />
         </Helmet>
         <div className="w-full min-h-5 flex-1 p-0 group">
           <div className="p-0 flex mt-5 bg-white rounded-lg">
@@ -63,9 +64,6 @@ export default function EvenstCardHome({
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
                     <FacebookShareButton
                       url={shareUrl}
-                      title={title}
-                      description={description}
-                      image={imageUrl}
                       hashtag="#SportHub"
                       className="flex items-center"
                     >
