@@ -65,6 +65,7 @@ export default function EvenstCardHome({
                     <FacebookShareButton
                       url={shareUrl}
                       hashtag="#SportHub"
+                      quote={"HelloWorld"}
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
