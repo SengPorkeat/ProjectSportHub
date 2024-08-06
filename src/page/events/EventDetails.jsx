@@ -24,6 +24,6 @@ export default function EventDetails() {
         description={seletByid.description}
         id={seletByid.id}
       />
-    </div>
+    </div> 
   );
 }
