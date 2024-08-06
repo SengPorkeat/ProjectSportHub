@@ -18,6 +18,9 @@ export default function EvenstCardHome({
   const formattedDate = moment(date).format("YYYY-MM-DD");
   const imageUrl = `${endPoint}${img}`;
 
+  console.log("Image URL:", imageUrl); // Debugging line
+  console.log("Title:", title); // Debugging line
+
   return (
     <Link to={`/eventDetail/${id}`}>
       <section
