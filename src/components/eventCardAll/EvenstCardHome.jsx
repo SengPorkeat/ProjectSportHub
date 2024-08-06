@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
 import { FacebookShareButton } from "react-share";
 import moment from "moment";
+import { Helmet } from "react-helmet";
 
 export default function EvenstCardHome({
   slug,
@@ -21,20 +22,18 @@ export default function EvenstCardHome({
   console.log("Image URL:", imageUrl); // Debugging line
   console.log("Title:", title); // Debugging line
 
-  const shareData = {
-    url: shareUrl,
-    quote: `${title} - ${description}`,
-    hashtag: "#SportHub",
-    picture: imageUrl,
-    title: title,
-  };
-
   return (
     <Link to={`/eventDetail/${id}`}>
       <section
         data-aos="fade-up"
         className="flex justify-center w-[75%] mx-auto"
       >
+        <Helmet>
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image" content={imageUrl} />
+          <meta property="og:url" content={shareUrl} />
+        </Helmet>
         <div className="w-full min-h-5 flex-1 p-0 group">
           <div className="p-0 flex mt-5 bg-white rounded-lg">
             <div className="flex flex-col md:flex-row">
@@ -63,7 +62,9 @@ export default function EvenstCardHome({
                 <div className="flex flex-col mb-2">
                   <div className="flex items-center bg-[#172554] w-[30px] justify-center text-white font-bold py-2 rounded-full">
                     <FacebookShareButton
-                      {...shareData}
+                      url={shareUrl}
+                      quote={`${title} - ${description}`}
+                      hashtag="#SportHub"
                       className="flex items-center"
                     >
                       <FaFacebookF className="h-[13px]" />
@@ -81,4 +82,3 @@ export default function EvenstCardHome({
     </Link>
   );
 }
-s
