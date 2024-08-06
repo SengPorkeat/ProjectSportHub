@@ -14,8 +14,9 @@ export default function EvenstCardHome({
   description,
   id,
 }) {
+  const baseUrl = import.meta.env.VITE_BASE_URL;
   const endPoint = import.meta.env.VITE_BASE_IMAGE_URL;
-  const shareUrl = `https://yourdomain.com/eventDetail/${id}`;
+  const shareUrl = `${baseUrl}/eventDetail/${id}`;
   const formattedDate = moment(date).format("YYYY-MM-DD");
   const imageUrl = `${endPoint}${img}`;
 
