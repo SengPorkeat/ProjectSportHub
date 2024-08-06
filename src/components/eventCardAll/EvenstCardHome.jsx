@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
-import { FacebookShareButton } from "react-share";
+import { FacebookShareButton, OKShareButton } from "react-share";
 import moment from "moment";
 import { Helmet } from "react-helmet";
 
